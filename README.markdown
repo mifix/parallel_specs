@@ -27,30 +27,23 @@ Run like hell :D
 
 Example output
 --------------
-
-    2 processes: 178 specs in  (89 specs per process)
-    Starting process 1
-    Starting process 2
+    2 processes for 210 specs, ~ 105 specs per process
     ... test output ...
-    Took 47.319378 seconds
-
+    Took 29.925333 seconds
 
 TIPS
 ====
  - `./script/generate rspec` if you are running rspec from gems (this plugin uses script/spec which may fail if rspec files are outdated)
  - with zsh this would be `rake "spec:parallel:prepare[3]"`
 
-
 TODO
 ====
- - sync the output, so that results do not appear all at once (using sh and system did not work so far, since they could not be interrupted once started(Ctrl+C handler))
  - find out how many CPUs the user has [here](http://stackoverflow.com/questions/891537/ruby-detect-number-of-cpus-installed)
- - grab the 'xxx examples ..' line and display them at the bottom
-
+ - grab the 'xxx examples ..' line and display them after all tests have finished
 
 Authors
-=======
-inspired by [pivotal labs](http://pivotallabs.com/users/miked/blog/articles/849-parallelize-your-rspec-suite)
+====
+inspired by [pivotal labs](http://pivotallabs.com/users/miked/blog/articles/849-parallelize-your-rspec-suite)  
 
 ###Contributors
  - [Joakim Kolsjö](http://www.rubyblocks.se) -- joakim.kolsjo<$at$>gmail.com
